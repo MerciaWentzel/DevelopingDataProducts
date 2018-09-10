@@ -1,0 +1,27 @@
+---
+title: "Cape Town Waterfront Map"
+author: 'Author: Mercia Carolina Wentzel'
+subtitle: Coursera Data Science Specialization (Johns Hopkins University) Developing Data Products Assignment Week 2
+output:
+  html_document:
+    df_print: paged
+---
+
+##--------------------------------------------------------------------------------------------
+# Executive Summary
+
+For this project, the requirement is to create a web page using R Markdown that features a map created with Leaflet.
+
+I have created a map featuring the Cape Town Waterfront in South Africa.
+
+```{r MyMap, echo = TRUE, warning = FALSE}
+
+library(leaflet)
+
+waterfront <- paste(
+  c("<a href= 'https://www.waterfront.co.za'>Waterfront</a>"),
+  format(Sys.Date(), format="%d %B %Y"))
+
+leaflet() %>% addTiles() %>% addMarkers(lat=-33.901829726, lng=18.420331652, popup = waterfront)
+
+```
