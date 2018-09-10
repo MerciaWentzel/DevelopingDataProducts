@@ -2,6 +2,7 @@
 title: "Cape Town Waterfront Map"
 author: 'Author: Mercia Carolina Wentzel'
 subtitle: Coursera Data Science Specialization (Johns Hopkins University) Developing Data Products Assignment Week 2
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output:
   html_document:
     df_print: paged
